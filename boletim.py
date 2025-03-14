@@ -1,4 +1,4 @@
-# Ecreva um algoritmo para ler um valor numérico ( do teclado) e escrever (na tela) o seu antecessor
+# Dados
 print("Nome do Aluno: ")
 nome = input()
 print("Qual sua nota da prova? ")
@@ -8,8 +8,12 @@ notatste = float(input())
 print("Nota de Atividade Avaliativa")
 notaav = float(input())
 
+#cálculo
 notaf = 2 * notaprova + notatste +  4 * notaav 
 notafinal = notaf / 7
+
+#tabela
 print("Nome do aluno","/", "NP","/", "NT","/", "NAV","/", "Nota Final")
-print("=================================")
+print("================================================")
 print( nome,  notaprova,"/",     notatste,"/",   notaav, "/", notafinal)
+print("================================================")
