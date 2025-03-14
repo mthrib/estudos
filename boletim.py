@@ -1,12 +1,8 @@
 # Dados
-print("Nome do Aluno: ")
-nome = input()
-print("Qual sua nota da prova? ")
-notaprova = float(input())
-print("Qual sua nota do teste?")
-notatste = float(input())
-print("Nota de Atividade Avaliativa")
-notaav = float(input())
+nome = input("Nome do aluno:")
+notaprova = float(input("Qual sua nota da prova? "))
+notatste = float(input("Qual sua nota do teste?"))
+notaav = float(input("Nota de Atividade Avaliativa"))
 
 #cálculo
 notaf = 2 * notaprova + notatste +  4 * notaav 
