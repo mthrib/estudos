@@ -1,0 +1,26 @@
+print("Seja Bem-Vindo(a) Calculadora de descontos!!")
+#perguntar valor do poduto e desconto
+while True:
+    
+    produto = float(input("Qual valor do seu produto: "))
+    desconto = float(input("Qual valor do seu desconto(0 a 100): "))
+    
+    if 0 <= desconto <= 100:
+        preco_final = produto * (1 - desconto / 100)
+        print("Valor final do seu desconto é R$", preco_final)
+    else:
+        print("Desconto Inválido! Digite um valor entre 0 a 100")
+
+#menu
+
+    print("\nEscolha uma opção:")
+    print("1 - Fazer um novo cálculo.")
+    print("2 - sair.")
+
+    opcao = input("Digite sua opção: ").strip()
+
+    if opcao == "2":
+        print("Obrigado por usar! :)")
+        break    
+    elif opcao != "1":
+        print("Você Digiou um valor invalido! o programa será encerrado")
