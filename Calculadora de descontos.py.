@@ -1,26 +1,65 @@
-print("Seja Bem-Vindo(a) Calculadora de descontos!!")
-#perguntar valor do poduto e desconto
-while True:
-    
-    produto = float(input("Qual valor do seu produto: "))
-    desconto = float(input("Qual valor do seu desconto(0 a 100): "))
-    
+def exibir_boas_vindas():
+    print("Seja Bem-Vindo(a) à Calculadora de Descontos!!")
+    print("============================================")
+    print("                                            ")
+
+def calcular_desconto(produto, desconto):
     if 0 <= desconto <= 100:
         preco_final = produto * (1 - desconto / 100)
-        print("Valor final do seu desconto é R$", preco_final)
+        return preco_final
     else:
-        print("Desconto Inválido! Digite um valor entre 0 a 100")
+        print("Desconto Inválido! Digite um valor entre 0 a 100.")
+        return None
 
-#menu
+def obter_valor_produto():
+    while True:
+        try:
+            produto = float(input("Qual valor do seu produto: R$ "))
+            if produto > 0:
+                return produto
+            else:
+                print("O valor do produto deve ser maior que zero. Tente novamente.")
+        except ValueError:
+            print("Entrada inválida! Digite um número válido.")
 
+def obter_valor_desconto():
+    while True:
+        try:
+            desconto = float(input("Qual valor do seu desconto (0 a 100): "))
+            if 0 <= desconto <= 100:
+                return desconto
+            else:
+                print("O desconto deve estar entre 0 e 100%. Tente novamente.")
+        except ValueError:
+            print("Entrada inválida! Digite um número válido.")
+
+def menu():
     print("\nEscolha uma opção:")
     print("1 - Fazer um novo cálculo.")
-    print("2 - sair.")
-
+    print("2 - Sair.")
     opcao = input("Digite sua opção: ").strip()
+    return opcao
 
-    if opcao == "2":
-        print("Obrigado por usar! :)")
-        break    
-    elif opcao != "1":
-        print("Você Digiou um valor invalido! o programa será encerrado")
+def main():
+    exibir_boas_vindas()
+    
+    while True:
+        produto = obter_valor_produto()
+        desconto = obter_valor_desconto()
+        
+        preco_final = calcular_desconto(produto, desconto)
+        if preco_final is not None:
+            print(f"Valor final com desconto: R$ {preco_final:.2f}")
+        
+        opcao = menu()
+        
+        if opcao == "2":
+            print("Obrigado por usar! :)")
+            print("Saindo ...")
+            break
+        elif opcao != "1":
+            print("Você digitou um valor inválido!.")
+            opcao = menu()
+
+# Iniciar o programa
+main()
