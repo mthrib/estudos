@@ -1,6 +1,6 @@
 def macas():
     while True:
-        maca = int(input("Quantas unidades vão ser compradas? "))
+        maca = int(input("Quantas unidades de maçã vão ser compradas? "))
         
         if maca < 12:
            valor_final1 = maca * 1.30
@@ -15,7 +15,7 @@ def macas():
         
 def bananas():
     while True:
-        banana = int(input("Quantos cachos de banana?"))
+        banana = int(input("Quantos cachos de banana vão ser comprados?"))
         if banana <= 3:
             valor1 = banana * 4.69
             print("==============================")
@@ -31,10 +31,10 @@ def menu():
     while True:
         print("\n____MENU____")
         print("1 - Calculo maçãs")
-        print("2 - Calculo")
+        print("2 - Calculo de bananas")
         print("3 - sair")
         
-        opcao = input("Digite sua opção: ")
+        opcao = (input("Digite sua opção: "))
             
         if opcao == "1":
             macas()
