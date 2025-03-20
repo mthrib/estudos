@@ -31,15 +31,14 @@ def menu():
     while True:
         print("\n____MENU____")
         print("1 - Calculo maçãs")
-        print("2 - Calculo bananas")
+        print("2 - Calculo")
         print("3 - sair")
-        opcao = int(input("Digite sua opção: "))
+        
+        opcao = (input("Digite sua opção: "))
             
         if opcao == "1":
-            break
-            maca()
+            macas()
         elif opcao == "2":
-            break
             bananas()
         elif opcao == "3":
             break
