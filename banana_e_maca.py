@@ -34,7 +34,7 @@ def menu():
         print("2 - Calculo")
         print("3 - sair")
         
-        opcao = (input("Digite sua opção: "))
+        opcao = input("Digite sua opção: ")
             
         if opcao == "1":
             macas()
